@@ -24,7 +24,7 @@ Este projeto é uma API financeira desenvolvida em Node.js. A API permite gerenc
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/finance_api_node.git
+    git clone https://github.com/seu-usuario/financial-control.git
     ```
 2. Navegue até o diretório do projeto:
     ```bash
@@ -43,7 +43,7 @@ Este projeto é uma API financeira desenvolvida em Node.js. A API permite gerenc
     PORT=4000
     ```
 
-2. Suba o container com mongodb:
+2. Suba o container com o mongodb e o redis:
 
     ```bash
     docker-compose up -d
@@ -59,8 +59,7 @@ Este projeto é uma API financeira desenvolvida em Node.js. A API permite gerenc
 
 ## Endpoints
 
-- `POST /bank`: Cria um novo banco
-- `POST /credit-card`: Cria um novo banco de dados
+
 
 ## Contribuição
 
