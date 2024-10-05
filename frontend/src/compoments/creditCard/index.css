@@ -1,0 +1,28 @@
+.creditCard {
+  display: inline-flex;
+  flex-shrink: 0;
+  top: 0;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 400px;
+  background-image: linear-gradient(
+    to left bottom,
+    #6c18b0,
+    #712bac,
+    #753aa8,
+    #7946a4,
+    #7c52a0,
+    #7c52a0,
+    #7c52a0,
+    #7c52a0,
+    #7946a4,
+    #753aa8,
+    #712bac,
+    #6c18b0
+  );
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;}
+
+

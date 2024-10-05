@@ -1,0 +1,46 @@
+.cardTransaction {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60px;
+  margin-top: 4px;
+  padding: 18px;
+  background-image: linear-gradient(
+    to right,
+    #353f54,
+    #323e52,
+    #303d51,
+    #2d3c4f,
+    #2b3b4d
+  );
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: aliceblue;
+}
+
+.classNameLeftCardTransaction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+}
+
+.classNameLeftCardTransaction label {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.classNameRightCardTransaction {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+
+.classNameRightCardTransaction  label {
+  font-size: 1.1em;
+  font-weight: 500;
+}

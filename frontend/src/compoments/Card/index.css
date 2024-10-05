@@ -1,0 +1,8 @@
+.cardVerticalArea {
+  height: 100%;
+  width: 100%;
+  border-radius: 40px;
+  padding: 20px 28px;
+  background-image: radial-gradient(circle, #111b2d, #131e2f, #162130, #182332, #1b2633);
+  box-shadow: rgba(220, 219, 219, 0.1) 0px 0px 5px 0px, rgba(62, 61, 61, 0.1) 0px 0px 1px 0px;
+}
