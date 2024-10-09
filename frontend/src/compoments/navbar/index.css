@@ -1,0 +1,44 @@
+#menu {
+  display: flex;
+  width: 8rem;
+  height:100%;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  flex-direction: column;
+  background-color: #3d8e94;
+}
+
+#area-options {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  flex-direction: column;
+}
+
+#AreaMenu{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+#logoSite{
+  width: 40px;
+  height: 40px;
+}
+
+
+#areaLogo {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  justify-content: flex-start;
+  align-items: center;
+}

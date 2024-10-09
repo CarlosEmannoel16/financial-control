@@ -1,3 +1,4 @@
+import { GetAllExpensesUseCase } from "../../../data/usecase/expenses/GetAllExpensesUseCase";
 import { GetExpensesByIdUseCase } from "../../../data/usecase/expenses/GetExpensesByIdUseCase";
 import { BankRepository } from "../../../infra/repository/mongo/BankRepository";
 
@@ -29,5 +30,10 @@ export default {
       creditCardId,
       expenseId,
     });
+  },
+
+  getAllExpenses: async () => {
+    const useCase = new GetAllExpensesUseCase(new BankRepository());
+    return useCase.execute();
   },
 };

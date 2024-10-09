@@ -2,8 +2,8 @@
   display: flex;
   width: 100%;
   height: 50%;
-  background-color: #1b2633;
-  border-radius: 20px;
+  background-color: #ffffff;  
+  border-radius: 10px;
   align-items: center;
   flex-direction: column;
   gap: 8px;
@@ -17,17 +17,12 @@
   padding: 20px;
 }
 
-.title-credit-cart-area label {
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.1em;
-}
 .body-credit-card-area {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: auto;
-  overflow: hidden;
+  overflow: auto;
   align-items: center;
   white-space: nowrap;
   padding: 20px;
@@ -38,6 +33,3 @@
   margin-right: 20px;
 }
 
-.body-credit-card-area > div:nth-child(n + 2) {
-  margin-left: -40%;
-}

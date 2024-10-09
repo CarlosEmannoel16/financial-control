@@ -4,11 +4,14 @@ import App from "./App.tsx";
 import "./index.css";
 import { ApolloProvider } from "@apollo/client";
 import client from "./service/apollo/client.ts";
+import { ExpenseProvider } from "./contexts/MenuAddExpenseContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
+    <ExpenseProvider>
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
+    </ExpenseProvider>
   </StrictMode>
 );

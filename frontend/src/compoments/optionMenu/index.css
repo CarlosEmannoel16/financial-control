@@ -1,12 +1,10 @@
 .option-header {
   padding: 6px 24px;
   margin: 0 10px;
-  border-radius: 50px;
-  transition: .3s all;
+  color: #fff;
 }
 
 .option-header:hover {
-  background-color: #e5e7eb;
   color: #020617;
   cursor: pointer;
 }

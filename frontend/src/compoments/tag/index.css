@@ -1,0 +1,28 @@
+.tag {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  background: #f1f1f1;
+  border-radius: 5px;
+  font-size: 0.8em;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tagPay {
+  background: #2be879;
+}
+
+.tagPay:hover {
+  background: #3de884;
+}
+
+.tagNotPay {
+  background: #f00;
+}
+
+.tagNotPay:hover {
+  background: #f33;
+}

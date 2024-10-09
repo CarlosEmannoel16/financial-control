@@ -39,6 +39,21 @@ export class BankRepository {
     await bank.save();
   }
 
+  async getAllCreditCards() {
+    const banks = await BankModel.find();
+
+    let creditCards: CreditCard[] = [];
+
+    banks.forEach((bank) => {
+      bank.creditCards.forEach((creditCard) => {
+        const card = new CreditCard(creditCard.id, creditCard.name);
+        creditCards.push(card);
+      });
+    });
+
+    return creditCards;
+  }
+
   async addExpense(bankId: string, creditCardId: string, expense: Expenses) {
     const bank = await BankModel.findOne({ id: bankId });
 
@@ -81,7 +96,7 @@ export class BankRepository {
     const bankInstance = new CreditCard(creditCard.name, creditCard.id);
 
     creditCard.expenses.forEach((expense) => {
-      console.log(expense)
+      console.log(expense);
       bankInstance.addExpense(
         new Expenses(
           expense.id,
@@ -93,7 +108,6 @@ export class BankRepository {
         )
       );
     });
-
 
     return bankInstance;
   }
@@ -126,5 +140,31 @@ export class BankRepository {
     }
 
     return expenseResult;
+  }
+
+  async getAllExpenses() {
+    const banks = await BankModel.find();
+
+    let expenses: Expenses[] = [];
+
+    banks.forEach((bank) => {
+      bank.creditCards.forEach((creditCard) => {
+        creditCard.expenses.forEach((expense) => {
+          console.log(expense);
+          expenses.push(
+            new Expenses(
+              expense.id,
+              expense.description,
+              expense.value,
+              expense.date,
+              "",
+              expense.numberOfTimes
+            )
+          );
+        });
+      });
+    });
+
+    return expenses;
   }
 }

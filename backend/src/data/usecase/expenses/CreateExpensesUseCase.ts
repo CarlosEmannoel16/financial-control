@@ -9,6 +9,7 @@ export interface ParamsCreateExpensesUseCase {
   bankId: string;
   creditCardId: string;
   numberOfTimes?: number;
+  status?: "paid" | "unpaid";
 }
 
 export class CreateExpensesUseCase {
@@ -24,6 +25,10 @@ export class CreateExpensesUseCase {
       data.numberOfTimes || 1
     );
 
-    await this.bankRepository.addExpense(data.bankId, data.creditCardId, expenses);
+    await this.bankRepository.addExpense(
+      data.bankId,
+      data.creditCardId,
+      expenses
+    );
   }
 }

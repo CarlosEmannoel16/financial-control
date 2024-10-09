@@ -13,6 +13,11 @@ export const ExpenseSchema = new Schema({
     type: String,
     required: true,
   },
+  status: {
+    type: String,
+    required: true,
+    default: "unpaid",
+  },
   date: {
     type: Date,
     required: true,

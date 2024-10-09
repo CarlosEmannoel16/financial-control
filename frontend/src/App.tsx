@@ -1,13 +1,18 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Body } from "./compoments/body/Body";
-import { Header } from "./compoments/header/Header";
+import { NavBar } from "./compoments/navbar/NavBar";
+import { Home } from "./pages/Dashboard/Home";
 
 function App() {
   return (
-    <div id="all-app">
-      <Header />
-      <Body />
-    </div>
+    <BrowserRouter>
+      <div id="all-app">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

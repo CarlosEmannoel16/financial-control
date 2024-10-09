@@ -8,11 +8,14 @@ import dotenv from "dotenv";
 import { routes } from "./routes";
 import { EventHandler } from "./src/data/eventsHandler/EventHandler";
 import resolvers from "./src/presentation/graphql/resolvers";
+import cors from "cors";
+
 const app = express();
 
 dotenv.config();
 
 mongoConnection().then(() => {
+  app.use(cors())
   app.use(express.json());
   app.use(
     "/graphql",

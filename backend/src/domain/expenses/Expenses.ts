@@ -5,6 +5,7 @@ export class Expenses {
   private _category?: string;
   private _id!: string;
   private _numberOfTimes = 1;
+  private _status: "paid" | "unpaid" = "unpaid";
 
   constructor(
     id: string,
@@ -12,7 +13,8 @@ export class Expenses {
     amount: number,
     date: Date,
     category?: string,
-    numberOfTimes?: number
+    numberOfTimes?: number,
+    status: "paid" | "unpaid" = "unpaid"
   ) {
     this._name = name;
     this._amount = amount;
@@ -20,6 +22,7 @@ export class Expenses {
     this._category = category;
     this._id = id;
     this._numberOfTimes = numberOfTimes || 1;
+    this._status = status;
 
     if (!this._id) {
       this._id = Math.random().toString(36).substr(2, 9);
@@ -44,6 +47,10 @@ export class Expenses {
 
   changeName(value: string) {
     this._name = value;
+  }
+
+  changeStatus(value: "paid" | "unpaid") {
+    this._status = value;
   }
 
   get amount(): number {
@@ -76,8 +83,9 @@ export class Expenses {
       description: this._name,
       value: this._amount,
       category: this._category,
-      date: this._date,
+      date: new Date(this._date).toLocaleDateString(),
       numberOfTimes: this._numberOfTimes,
+      status: this._status,
     };
   }
 }

@@ -30,8 +30,10 @@ export const schemas = buildSchema(`
 
       getCreditCardById(id: String, bankId: String): CreditCard
       getCreditCardByBank(bankId: String): [CreditCard]
+      getAllCreditCards: [CreditCard]
 
       getExpensesByCreditCardId(id: String): [Expense]
       getExpenseById(bankId: String, creditCardId: String, ExpenseId: String): Expense
+      getAllExpenses: [Expense]
     }
 `);
